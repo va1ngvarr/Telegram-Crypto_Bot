@@ -1,0 +1,9 @@
+{
+	"order": {
+		"order_1": {"price": 89, "term_ru": "14 дней", "term_en": "14 days"},
+		"order_2": {"price": 151, "term_ru": "1 месяц", "term_en": "1 month"},
+		"order_3": {"price": 266, "term_ru": "2 месяца", "term_en": "2 months"},
+		"order_4": {"price": 666, "term_ru": "6 месяцев", "term_en": "6 months"},
+		"order_5": {"price": 1100, "term_ru": "12 месяцев", "term_en": "12 months"}
+	}
+}

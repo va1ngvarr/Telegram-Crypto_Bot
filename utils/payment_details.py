@@ -1,0 +1,26 @@
+import logging
+import json
+
+import requests
+
+from config import OXAPAY_MERCHANT_KEY
+
+
+url = "https://api.oxapay.com/merchants/inquiry"
+
+
+def payment_details(track_id: int, lang: str):
+    data = {
+        "merchant": OXAPAY_MERCHANT_KEY[lang],
+        "trackId": track_id,
+    }
+
+    response = requests.post(url=url, data=json.dumps(data))
+
+    res = response.json()
+
+    if res["result"] == 100:
+        logging.info("Oxapay responsed succesfully.")
+        return res
+    logging.error(f"Oxapay says that result is {res['result']}")
+    return None

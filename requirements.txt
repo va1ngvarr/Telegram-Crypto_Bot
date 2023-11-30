@@ -1,0 +1,3 @@
+aiogram==3.0.0b7
+peewee
+requests
